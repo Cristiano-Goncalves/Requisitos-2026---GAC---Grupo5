@@ -1,55 +1,115 @@
-# Requisitos-2026---GAC---Grupo5
+# 1. Objetivo
 
-📽️ ProjecTrack: Cadeia de Custódia e Gestão Inteligente de Ativos
+Definir a proposta de valor e o escopo do Sistema de Gestão de Projetores (ProjecTrack) do Centro de Ciências Tecnológicas (CCT) da UNIFOR, detalhando as necessidades da Secretaria, dos professores e da gestão universitária.
 
-Projeto concebido para a disciplina de Engenharia de Requisitos / Modelagem de Sistemas. Focado em resolver o problema de rastreabilidade logística e responsabilização de equipamentos (projetores) no Centro de Ciências Tecnológicas (CCT) da UNIFOR.
+# 2. Proposta de Valor
 
-📌 O Problema
+O sistema permitirá modernizar e digitalizar o controle de empréstimos de equipamentos audiovisuais, facilitando a retirada no balcão e a auditoria de devoluções. Espera-se eliminar as filas através de reconhecimento facial, garantir a rastreabilidade via repasse digital nos corredores e reduzir o extravio e prejuízos por avarias não responsabilizadas.
 
-Atualmente, o controle de empréstimos de projetores sofre com registros manuais vulneráveis. O maior gargalo ocorre nos repasses informais de corredor (quando o Prof. A repassa o equipamento ao Prof. B). A secretaria perde o rastro do ativo, impossibilitando a responsabilização correta em caso de extravios ou avarias, gerando prejuízos institucionais.
+# 3. Descrição da Demanda
 
-💡 A Solução
+O sistema apoiará a Secretaria da UNIFOR na organização do inventário de projetores, identificação ágil de professores (biometria facial), registro de transferências de posse fora da secretaria (via QR Code e GPS) e auditoria de avarias. Todo o processo será digital, com autenticação segura, adequação à LGPD e histórico imutável de alterações de custódia.
 
-O ProjecTrack substitui os cadernos por uma Cadeia de Custódia Digital Inquebrável utilizando:
+# 4. Partes Interessadas
 
-Inteligência Artificial (Biometria): Check-out instantâneo via reconhecimento facial no balcão da secretaria.
+| Nome | Papel | Responsabilidades | Representante |
+| :--- | :--- | :--- | :--- |
+| UNIFOR | Cliente | Financiar e adotar o sistema, estabelecer as políticas institucionais de patrimônio e proteção de dados. | Reitoria / TI |
+| CCT (Centro de Ciências e Tecnologia) | Patrocinador (Área Foco) | Fornecer o ambiente de validação do projeto, gerenciar o inventário local de projetores. | Direção do CCT |
+| Secretaria da UNIFOR (CCT) | Especialista do Domínio | Fornecer as regras de negócio de como o processo funciona hoje, operar os empréstimos, devoluções e fiscalizar equipamentos. | Atendente Chefe |
+| Professor | Usuário final | Solicitar o projetor, assinar o termo digitalmente, oficializar repasses no corredor via celular e zelar pelo equipamento. | - |
+| Equipe de Desenvolvimento | Desenvolvimento | Levantar requisitos, desenhar a arquitetura, implementar e testar o sistema ProjecTrack. | Equipe de Alunos |
 
-Rastreamento Colaborativo (Mobile + GPS): Transferência de responsabilidade nos corredores através da leitura de QR Codes usando o smartphone do próprio docente.
+# 5. Personas
 
-Auditoria de Integridade: Check-in condicionado a um checklist de hardware obrigatório.
+### 5.1 Professor Solicitante
 
-🚀 Principais Funcionalidades
+* **Descrição:** Docente do CCT que necessita do projetor multimídia para lecionar suas aulas.
 
-👤 Check-out Fricção Zero: Identificação biométrica do docente na secretaria em menos de 3s. O sistema não salva fotos, apenas vetores matemáticos, garantindo conformidade com a LGPD.
+* **Objetivo:** Retirar o equipamento na secretaria de forma imediata (sem preencher planilhas físicas) e conseguir repassar o ativo para um colega no corredor de forma oficial, isentando-se da responsabilidade.
 
-🤝 Repasse Oficial (QR Code): O Docente B lê a etiqueta do projetor com o celular. O sistema transfere a posse e isenta o Docente A.
+### 5.2 Atendente da Secretaria
 
-📍 Mapa de Calor & GPS: Durante o repasse, as coordenadas do celular atualizam um mapa do campus ao vivo no painel da secretaria (via Leaflet.js).
+* **Descrição:** Colaborador que opera o balcão de atendimento e cuida da reserva de laboratórios e equipamentos.
 
-⚖️ Termos com Peso Jurídico: Disparo de e-mails automáticos ("Termo de Responsabilidade" e "Recibo de Quitação") a cada alteração de status.
+* **Objetivo:** Liberar a fila de professores rapidamente nos inícios de turno e garantir que não seja injustamente responsabilizado caso um projetor volte danificado da sala de aula.
 
-⚠️ Bloqueio por Avaria: Formulário de devolução obriga a conferência de lentes e cabos. Falhas geram ocorrências que bloqueiam o docente para novos empréstimos até regularização.
+# 6. Necessidades e Funcionalidades
 
-🛠️ Stack Tecnológica (Proposta)
+### Necessidade 1: Identificação ágil e retirada de equipamentos
 
-Backend & Inteligência Artificial
+> **Nota:** O processo de retirada deve ser sem atrito, dispensando a assinatura em papel.
 
-Python (FastAPI): Alta performance e requisições assíncronas.
+**F1.1 Reconhecimento facial no balcão (Check-out)**
 
-OpenCV / DeepFace: Processamento de visão computacional e extração da matriz facial.
+* **Descrição:** Permite capturar a face do professor via webcam, cruzar com a base de dados e identificá-lo automaticamente.
+* **Incluída**
+* **Atores:** Secretaria da UNIFOR, Professor
+* **Frequência:** Alta
+* **Valor:** Alto
 
-PostgreSQL + pgvector: Armazenamento relacional e busca vetorial de similaridade para a biometria em milissegundos.
+**F1.2 Geração e envio de Termo de Responsabilidade**
 
-Frontend (Secretaria)
+* **Descrição:** Permite registrar o empréstimo vinculando o projetor ao professor e dispara o comprovante por e-mail.
+* **Incluída**
+* **Atores:** Secretaria da UNIFOR, Professor
+* **Frequência:** Alta
+* **Valor:** Alto
 
-React.js & TailwindCSS: Interface responsiva e design system moderno.
+### Necessidade 2: Rastreabilidade e repasse nos corredores
 
-Leaflet.js: Renderização do mapa do campus interativo.
+**F2.1 Transferência de posse P2P via QR Code (PWA)**
 
-Chart.js: Gráficos de Business Intelligence e disponibilidade.
+* **Descrição:** Permite que um professor leia a etiqueta do projetor com o celular e assuma a custódia do equipamento que estava com outro professor.
+* **Incluída**
+* **Atores:** Professor
+* **Frequência:** Média
+* **Valor:** Alto
 
-Mobile & Físico
+**F2.2 Captura de geolocalização**
 
-Integração Webview/Nativa: Módulo inserido no app institucional existente.
+* **Descrição:** Permite capturar as coordenadas de GPS do navegador do smartphone no momento exato em que ocorre o repasse entre professores.
+* **Incluída**
+* **Atores:** Professor
+* **Frequência:** Média
+* **Valor:** Alto
 
-Etiquetas Físicas: Vinil destrutível com impressão de QR Code.
+### Necessidade 3: Auditoria de devolução e gestão de avarias
+
+**F3.1 Checklist de devolução (Check-in)**
+
+* **Descrição:** Permite ao atendente preencher um checklist de integridade obrigatório (verificar lente, controle, cabos) antes de finalizar o empréstimo.
+* **Incluída**
+* **Atores:** Secretaria da UNIFOR
+* **Frequência:** Alta
+* **Valor:** Alto
+
+**F3.2 Registro de ocorrência e bloqueio**
+
+* **Descrição:** Permite registrar avarias vinculadas ao último responsável e bloquear automaticamente novos empréstimos para o docente até a regularização.
+* **Incluída**
+* **Atores:** Secretaria da UNIFOR, CCT
+* **Frequência:** Baixa
+* **Valor:** Médio
+
+### Necessidade 4: Segurança, monitoramento e conformidade
+
+**F4.1 Mapa de rastreamento do patrimônio**
+
+* **Descrição:** Permite à secretaria consultar em um mapa interativo o último local de repasse reportado pelo GPS de cada projetor ativo.
+* **Incluída**
+* **Atores:** Secretaria da UNIFOR
+* **Frequência:** Alta
+* **Valor:** Alto
+
+**F4.2 Conformidade legal (LGPD) com vetores faciais**
+
+* **Descrição:** Garante que o banco de dados armazene apenas representações matemáticas do rosto (embeddings), sendo impossível recriar ou salvar a foto original do professor.
+* **Incluída**
+* **Atores:** Sistema (Desenvolvimento)
+* **Frequência:** Sempre
+* **Valor:** Alto
+
+# 7. Arquitetura da Demanda
+
+O sistema será composto por módulos de Identificação Biométrica (Inteligência Artificial), Gestão de Inventário, Transferência Web Responsiva (PWA) e Auditoria de Devolução. Utilizará banco de dados relacional adaptado para buscas de similaridade (PostgreSQL com pgvector) e será acessível via navegadores web modernos tanto no desktop (Secretaria) quanto nos smartphones dos docentes. Integração com sistemas da prefeitura/reitoria da UNIFOR para envio de e-mails institucionais e hospedagem em servidores próprios da universidade para garantir a segurança dos dados.
