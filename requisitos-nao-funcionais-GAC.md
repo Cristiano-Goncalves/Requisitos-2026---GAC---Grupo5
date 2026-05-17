@@ -4,15 +4,15 @@
 
 ### 1.1. Eficiência de Desempenho
 
-#### 1.1.1. Comportamento temporal
+#### 1.1.1. Performance de Reconhecimento
 O tempo de resposta entre a captura da imagem no balcão e a identificação do docente não deve ultrapassar 2.5 segundos.
 
 ### 1.2. Privacidade
 
-#### 1.2.1. Necessidade
+#### 1.2.1. Conformidade LGPD (Privacidade Privilegiada)
 O banco de dados jamais armazenará imagens (arquivos .jpg/.png) das faces dos docentes. O sistema armazenará apenas a representação matemática (matriz de *embeddings*), impossibilitando a engenharia reversa para reconstrução do rosto.
 
 ### 1.3. Capacidade de Interação (UX + usabilidade + acessibilidade)
 
-#### 1.3.1. Operabilidade
+#### 1.3.1. Usabilidade (Fricção Zero)
 O repasse pelo smartphone (RF04) deve utilizar o token de autenticação (SSO) já ativo no *Unifor Mobile*, sem exigir que o docente digite login e senha novamente.
