@@ -110,6 +110,36 @@ O sistema apoiará a Secretaria da UNIFOR na organização do inventário de pro
 * **Frequência:** Sempre
 * **Valor:** Alto
 
+### Necessidade 5: Gestão de Cadastros e Prontuário de Ativos
+
+#### F5.1 Cadastro Unificado de Docente e Captura Biométrica
+* **Descrição:** Permite realizar o cadastro inicial e único do docente, coletando obrigatoriamente Nome Completo, Código de Acesso/Matrícula UNIFOR e CPF. No mesmo fluxo, realiza a captura biométrica facial inicial para extração e salvamento do vetor numérico (*embedding*).
+* **Status:** Incluída
+* **Atores:** Secretaria da UNIFOR, Professor
+* **Frequência:** Baixa (Apenas no primeiro acesso)
+* **Valor:** Alto
+
+#### F5.2 Cadastro e Prontuário do Projetor com Histórico
+* **Descrição:** Permite o registro de novos projetores no inventário da instituição, associando o identificador único ao ano de fabricação do aparelho e abrindo uma linha do tempo digital para registro de manutenções preventivas e consertos anteriores.
+* **Status:** Incluída
+* **Atores:** Secretaria da UNIFOR, CCT
+* **Frequência:** Baixa
+* **Valor:** Alto
+
+#### F5.3 Leitura de QR Code Informativa e de Custódia (Visão do Professor)
+* **Descrição:** Permite que o professor escaneie o QR Code do projetor via smartphone para registrar/confirmar que o equipamento está sob sua posse direta ou aceitar uma transferência, exibindo para ele apenas a tela de confirmação de posse.
+* **Status:** Incluída
+* **Atores:** Professor
+* **Frequência:** Alta
+* **Valor:** Alto
+
+#### F5.4 Consulta ao Prontuário Técnico via QR Code (Visão da Secretaria)
+* **Descrição:** Permite que a secretaria escaneie o QR Code de um projetor para acessar instantaneamente as informações restritas da instituição, como o histórico completo de consertos, avarias passadas e tempo de vida útil restante do equipamento.
+* **Status:** Incluída
+* **Atores:** Secretaria da UNIFOR, CCT
+* **Frequência:** Média
+* **Valor:** Médio
+  
 # 7. Arquitetura da Demanda
 
 O sistema será composto por módulos de Identificação Biométrica (Inteligência Artificial), Gestão de Inventário, Transferência Web Responsiva (PWA) e Auditoria de Devolução. Utilizará banco de dados relacional adaptado para buscas de similaridade (PostgreSQL com pgvector) e será acessível via navegadores web modernos tanto no desktop (Secretaria) quanto nos smartphones dos docentes. Integração com sistemas da prefeitura/reitoria da UNIFOR para envio de e-mails institucionais e hospedagem em servidores próprios da universidade para garantir a segurança dos dados.
