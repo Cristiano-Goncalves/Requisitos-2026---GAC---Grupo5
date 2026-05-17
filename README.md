@@ -102,14 +102,6 @@ O sistema apoiará a Secretaria da UNIFOR na organização do inventário de pro
 * **Frequência:** Alta
 * **Valor:** Alto
 
-**F4.2 Conformidade legal (LGPD) com vetores faciais**
-
-* **Descrição:** Garante que o banco de dados armazene apenas representações matemáticas do rosto (embeddings), sendo impossível recriar ou salvar a foto original do professor.
-* **Incluída**
-* **Atores:** Sistema (Desenvolvimento)
-* **Frequência:** Sempre
-* **Valor:** Alto
-
 ### Necessidade 5: Gestão de Cadastros e Prontuário de Ativos
 
 #### F5.1 Cadastro Unificado de Docente e Captura Biométrica
