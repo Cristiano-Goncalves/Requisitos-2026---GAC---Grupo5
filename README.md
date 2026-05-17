@@ -96,7 +96,7 @@ O sistema apoiará a Secretaria da UNIFOR na organização do inventário de pro
 
 **F4.1 Mapa de rastreamento do patrimônio**
 
-* **Descrição:** Permite à secretaria consultar em um mapa interativo o último local de repasse reportado pelo GPS de cada projetor ativo.
+* **Descrição:** Permite à secretaria consultar em um mapa interativo o último local de repasse reportado pelo QR Code de cada projetor ativo a partir da saída da Secretaria do CCT.
 * **Incluída**
 * **Atores:** Secretaria da UNIFOR
 * **Frequência:** Alta
