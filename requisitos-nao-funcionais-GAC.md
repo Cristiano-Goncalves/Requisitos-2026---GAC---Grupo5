@@ -15,4 +15,4 @@ O banco de dados jamais armazenará imagens (arquivos .jpg/.png) das faces dos d
 ### 1.3. Capacidade de Interação (UX + usabilidade + acessibilidade)
 
 #### 1.3.1. Usabilidade (Fricção Zero)
-O repasse pelo smartphone (RF04) deve utilizar o token de autenticação (SSO) já ativo no *Unifor Mobile*, sem exigir que o docente digite login e senha novamente.
+O repasse via smartphone deverá ocorrer por meio da leitura do QR Code disponibilizado no projetor. Após a leitura, o docente será direcionado para uma URL de autenticação com reconhecimento facial, permitindo a transferência de custódia diretamente pelo navegador do dispositivo móvel, de forma rápida e segura.
