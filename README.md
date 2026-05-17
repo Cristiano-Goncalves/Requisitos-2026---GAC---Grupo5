@@ -134,4 +134,4 @@ O sistema apoiará a Secretaria da UNIFOR na organização do inventário de pro
   
 # 7. Arquitetura da Demanda
 
-O sistema será composto por módulos de Identificação Biométrica (Inteligência Artificial), Gestão de Inventário, Transferência Web Responsiva (PWA) e Auditoria de Devolução. Utilizará banco de dados relacional adaptado para buscas de similaridade (PostgreSQL com pgvector) e será acessível via navegadores web modernos tanto no desktop (Secretaria) quanto nos smartphones dos docentes. Integração com sistemas da prefeitura/reitoria da UNIFOR para envio de e-mails institucionais e hospedagem em servidores próprios da universidade para garantir a segurança dos dados.
+O sistema será composto por módulos de Identificação Biométrica (Inteligência Artificial), Gestão de Inventário, Transferência Web Responsiva (PWA) e Auditoria de Devolução. Utilizará banco de dados relacional adaptado para buscas de similaridade (PostgreSQL com pgvector) e será acessível via navegadores web modernos tanto no desktop (Secretaria) quanto nos smartphones dos docentes. 
