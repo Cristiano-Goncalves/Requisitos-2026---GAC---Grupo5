@@ -142,4 +142,5 @@ O sistema será composto por módulos de Identificação Biométrica (Inteligên
 
 Ilustra os atores (CCT- Coordenação, Secretaria CCT e Professor) e suas interações com os principais casos de uso do sistema.
 
+
 <img width="1368" height="1923" alt="diagrama-Page-1 (1)" src="https://github.com/user-attachments/assets/b7b990ca-423a-4eea-8647-38d02d9848c9" />
