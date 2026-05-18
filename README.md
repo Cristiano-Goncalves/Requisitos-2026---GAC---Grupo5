@@ -135,3 +135,11 @@ O sistema apoiará a Secretaria da UNIFOR na organização do inventário de pro
 # 7. Arquitetura da Demanda
 
 O sistema será composto por módulos de Identificação Biométrica (Inteligência Artificial), Gestão de Inventário, Transferência Web Responsiva (PWA) e Auditoria de Devolução. Utilizará banco de dados relacional adaptado para buscas de similaridade (PostgreSQL com pgvector) e será acessível via navegadores web modernos tanto no desktop (Secretaria) quanto nos smartphones dos docentes. 
+
+### 7.1. Diagramas UML
+
+#### 7.1.1. Diagrama de Caso de Uso
+
+Ilustra os atores (CCT- Coordenação, Secretaria CCT e Professor) e suas interações com os principais casos de uso do sistema.
+
+<img width="1368" height="1923" alt="diagrama-Page-1 (1)" src="https://github.com/user-attachments/assets/b7b990ca-423a-4eea-8647-38d02d9848c9" />
