@@ -1,16 +1,23 @@
-# 1. Objetivo
+# 1. Histórico de Versões
+
+| Data | Versão | Descrição | Autor |
+| :--- | :--- | :--- | :--- |
+| 03/05/2026 | 1.0.0 | Criação inicial do documento de Proposta de Valor e Escopo do ProjecTrack. | Iandeyara Farias, Cristiano Gonçalves e Myrla Rodrigues |
+| 17/05/2026 | 1.1.0 | Inclusão de personas e diagrama de casos de uso. | Iandeyara Farias, Cristiano Gonçalves e Myrla Rodrigues |
+
+# 2. Objetivo
 
 Definir a proposta de valor e o escopo do Sistema de Gestão de Projetores (ProjecTrack) do Centro de Ciências Tecnológicas (CCT) da UNIFOR, detalhando as necessidades da Secretaria, dos professores e da gestão universitária.
 
-# 2. Proposta de Valor
+# 3. Proposta de Valor
 
 O sistema permitirá modernizar e digitalizar o controle de empréstimos de equipamentos audiovisuais, facilitando a retirada no balcão e a auditoria de devoluções. Espera-se eliminar as filas através de reconhecimento facial, garantir a rastreabilidade via repasse digital nos corredores e reduzir o extravio e prejuízos por avarias não responsabilizadas.
 
-# 3. Descrição da Demanda
+# 4. Descrição da Demanda
 
 O sistema apoiará a Secretaria da UNIFOR na organização do inventário de projetores, identificação ágil de professores (biometria facial), registro de transferências de posse fora da secretaria (via QR Code e GPS) e auditoria de avarias. Todo o processo será digital, com autenticação segura, adequação à LGPD e histórico imutável de alterações de custódia.
 
-# 4. Partes Interessadas
+# 5. Partes Interessadas
 
 | Nome | Papel | Responsabilidades | Representante |
 | :--- | :--- | :--- | :--- |
@@ -20,26 +27,27 @@ O sistema apoiará a Secretaria da UNIFOR na organização do inventário de pro
 | Professor | Usuário final | Solicitar o projetor, assinar o termo digitalmente, oficializar repasses no corredor via celular e zelar pelo equipamento. | - |
 | Equipe de Desenvolvimento | Desenvolvimento | Levantar requisitos, desenhar a arquitetura, implementar e testar o sistema ProjecTrack. | Equipe de Alunos |
 
-# 5. Personas
+# 6. Personas
 
-### 5.1 Professor Solicitante
+### 6.1 Professor Solicitante
 
 * **Descrição:** Docente do CCT que necessita do projetor multimídia para lecionar suas aulas.
 
 * **Objetivo:** Retirar o equipamento na secretaria de forma imediata (sem preencher planilhas físicas) e conseguir repassar o ativo para um colega no corredor de forma oficial, isentando-se da responsabilidade.
 
-### 5.2 Atendente da Secretaria
+### 6.2 Atendente da Secretaria
 
 * **Descrição:** Colaborador que opera o balcão de atendimento e cuida da reserva de laboratórios e equipamentos.
 
 * **Objetivo:** Liberar a fila de professores rapidamente nos inícios de turno e garantir que não seja injustamente responsabilizado caso um projetor volte danificado da sala de aula.
 
-### 5.3 Coordenação do CCT (Gestor)
+### 6.3 Coordenação do CCT (Gestor)
 
 * **Descrição:** Responsável pela administração do patrimônio do centro acadêmico, supervisão dos processos da secretaria e mediação de conflitos institucionais.
 
 * **Objetivo:** Ter visibilidade global do estado de conservação e uso do inventário de projetores, acompanhar métricas de avarias e ter a autoridade final sobre o bloqueio ou desbloqueio de professores que violaram os termos de responsabilidade.
-# 6. Necessidades e Funcionalidades
+
+# 7. Necessidades e Funcionalidades
 
 ### Necessidade 1: Identificação ágil e retirada de equipamentos
 
@@ -137,15 +145,14 @@ O sistema apoiará a Secretaria da UNIFOR na organização do inventário de pro
 * **Frequência:** Média
 * **Valor:** Médio
   
-# 7. Arquitetura da Demanda
+# 8. Arquitetura da Demanda
 
 O sistema será composto por módulos de Identificação Biométrica (Inteligência Artificial), Gestão de Inventário, Transferência Web Responsiva (PWA) e Auditoria de Devolução. Utilizará banco de dados relacional adaptado para buscas de similaridade (PostgreSQL com pgvector) e será acessível via navegadores web modernos tanto no desktop (Secretaria) quanto nos smartphones dos docentes. 
 
-### 7.1. Diagramas UML
+### 8.1. Diagramas UML
 
-#### 7.1.1. Diagrama de Caso de Uso
+#### 8.1.1. Diagrama de Caso de Uso
 
 Ilustra os atores (CCT- Coordenação, Secretaria CCT e Professor) e suas interações com os principais casos de uso do sistema.
-
 
 <img width="1368" height="1923" alt="diagrama-Page-1 (1)" src="https://github.com/user-attachments/assets/b7b990ca-423a-4eea-8647-38d02d9848c9" />
