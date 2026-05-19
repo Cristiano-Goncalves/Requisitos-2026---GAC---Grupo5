@@ -34,6 +34,11 @@ O sistema apoiará a Secretaria da UNIFOR na organização do inventário de pro
 
 * **Objetivo:** Liberar a fila de professores rapidamente nos inícios de turno e garantir que não seja injustamente responsabilizado caso um projetor volte danificado da sala de aula.
 
+### 5.3 Coordenação do CCT (Gestor)
+
+* **Descrição:** Responsável pela administração do patrimônio do centro acadêmico, supervisão dos processos da secretaria e mediação de conflitos institucionais.
+
+* **Objetivo:** Ter visibilidade global do estado de conservação e uso do inventário de projetores, acompanhar métricas de avarias e ter a autoridade final sobre o bloqueio ou desbloqueio de professores que violaram os termos de responsabilidade.
 # 6. Necessidades e Funcionalidades
 
 ### Necessidade 1: Identificação ágil e retirada de equipamentos
