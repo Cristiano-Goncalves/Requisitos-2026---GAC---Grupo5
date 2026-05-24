@@ -2,9 +2,9 @@
 
 > **Projeto:** ProjecTrack — Sistema de Gestão de Projetores do CCT/UNIFOR
 > **Versão:** 1.2.0
-> **Autores:** Iandeyara Farias, Cristiano Gonçalves e Myrla Rodrigues
+> **Autores:** Iandeyara Farias, Cristiano Gonçalves, Myrla Rodrigues e Sophia Cavalcante
 > **Última atualização:** 21/05/2026
-> **Metodologia:** Baseada no processo LAPIS (ProfBezerra/LAPIS)
+> 
 
 ---
 
@@ -14,7 +14,7 @@
 |---|---|---|---|
 | 03/05/2026 | 1.0.0 | Criação inicial da especificação de casos de uso. | Iandeyara Farias, Cristiano Gonçalves e Myrla Rodrigues |
 | 17/05/2026 | 1.1.0 | Inclusão de personas e diagrama de casos de uso. | Iandeyara Farias, Cristiano Gonçalves e Myrla Rodrigues |
-| 21/05/2026 | 1.2.0 | Detalhamento completo dos casos de uso no padrão LAPIS. | Iandeyara Farias, Cristiano Gonçalves e Myrla Rodrigues |
+| 21/05/2026 | 1.2.0 | Detalhamento completo dos casos de uso | Iandeyara Farias, Cristiano Gonçalves, Myrla Rodrigues e Sophia Cavalcante|
 
 ---
 
@@ -1117,4 +1117,3 @@ Use este checklist ao revisar cada caso de uso.
 
 - COCKBURN, Alistair. *Escrevendo Casos de Uso Eficazes*. Porto Alegre: Bookman, 2005.
 - FOWLER, M. *UML Essencial*. Porto Alegre, 3ª Edição, 2005.
-- BEZERRA, Eduardo. [Processo LAPIS — Documentando Requisitos com Caso de Uso](https://github.com/ProfBezerra/LAPIS/blob/main/Requisitos/Especifica%C3%A7%C3%A3o%20de%20Casos%20de%20Uso/Casos%20de%20Usos.md). GitHub, 2026.
