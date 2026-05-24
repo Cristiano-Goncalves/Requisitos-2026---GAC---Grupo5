@@ -3,7 +3,7 @@
 > **Projeto:** ProjecTrack — Sistema de Gestão de Projetores do CCT/UNIFOR
 > **Versão:** 1.2.0
 > **Autores:** Iandeyara Farias, Cristiano Gonçalves, Myrla Rodrigues e Sophia Cavalcante
-> **Última atualização:** 21/05/2026
+> **Última atualização:** 24/05/2026
 > 
 
 ---
@@ -1068,52 +1068,3 @@ Baixa. Executado pontualmente após ocorrências de avaria ou após regularizaç
 | CDU-10 | F3.2 | RN2 |
 
 ---
-
-## Checklist de Validação dos Artefatos (CDU)
-
-Use este checklist ao revisar cada caso de uso.
-
-### Estrutura mínima
-
-- [ ] O caso de uso possui nome iniciado por verbo no infinitivo.
-- [ ] O objetivo está claro, direto e representa um único objetivo principal.
-- [ ] O tipo (concreto ou abstrato) está informado.
-- [ ] Os atores foram identificados e classificados corretamente (primário/secundário).
-- [ ] As pré-condições descrevem condições reais de início do fluxo.
-- [ ] O fluxo principal está completo e atende ao objetivo do caso de uso.
-- [ ] Existem fluxos alternativos para variações esperadas.
-- [ ] Existem fluxos de exceção para falhas e erros relevantes.
-- [ ] As pós-condições descrevem o estado esperado ao final do caso de uso.
-- [ ] Os requisitos não funcionais específicos estão listados quando aplicável.
-- [ ] Os pontos de extensão estão descritos quando aplicável.
-- [ ] A frequência de utilização foi estimada.
-
-### Qualidade da escrita
-
-- [ ] Os passos estão escritos com verbos no presente do indicativo (3ª pessoa).
-- [ ] Há alternância adequada entre ações do ator e da solução.
-- [ ] Os atores são citados por nome.
-- [ ] Não há ambiguidade nos passos.
-- [ ] A linguagem está simples, objetiva e compreensível.
-
-### Consistência e rastreabilidade
-
-- [ ] Os pontos de entrada e saída dos fluxos alternativos estão explícitos.
-- [ ] Os fluxos de exceção estão associados a passos da solução.
-- [ ] As regras de negócio citadas estão identificadas de forma rastreável (RNx).
-- [ ] As referências entre passos (retorna ao Px, segue para Px) estão corretas.
-- [ ] A tabela de rastreabilidade CDU × F × RN está atualizada.
-
-### Revisão final
-
-- [ ] Não há conflitos entre fluxo principal, alternativos e exceções.
-- [ ] O artefato está coerente com a Visão da Demanda e as Regras de Negócio.
-- [ ] O documento foi revisado por outro integrante do time (revisão por pares).
-- [ ] O artefato está pronto para uso em projeto, desenvolvimento e testes.
-
----
-
-## Referências
-
-- COCKBURN, Alistair. *Escrevendo Casos de Uso Eficazes*. Porto Alegre: Bookman, 2005.
-- FOWLER, M. *UML Essencial*. Porto Alegre, 3ª Edição, 2005.
