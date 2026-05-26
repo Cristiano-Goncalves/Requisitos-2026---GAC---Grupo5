@@ -282,7 +282,7 @@ Baixa. Realizado somente na incorporação de novos equipamentos ao inventário.
 
 ### Objetivo
 
-Permitir o empréstimo de um projetor disponível a um professor identificado, gerando o Termo de Responsabilidade digital e associando o contexto de aula ao equipamento.
+Permitir o empréstimo de um projetor disponível a um professor identificado, gerando o Termo de Responsabilidade digital e associando a sala de destino informada pelo professor ao equipamento.
 
 ### Tipo
 
@@ -291,7 +291,7 @@ Concreto.
 ### Atores
 
 - **Primário:** Secretaria CCT
-- **Secundário:** Professor (presente no balcão), Sistema de Horários UNIFOR, Serviço de E-mail
+- **Secundário:** Professor (presente no balcão), Serviço de E-mail
 
 ### Pré-condições
 
@@ -310,13 +310,15 @@ Concreto.
 
 **P5.** O Professor posiciona o rosto diante da câmera.
 
-**P6.** O sistema realiza o reconhecimento facial, incluindo o caso de uso **CDU-04 — Identificar Professor por Reconhecimento Facial**. **[A1][E2][E3]**
+**P6.** O sistema realiza o reconhecimento facial, incluindo o caso de uso **CDU-04 — Identificar Professor por Reconhecimento Facial**. **[A1][E2]**
 
 **P7.** O sistema exibe o card de confirmação do professor identificado com: Nome, Matrícula, Departamento.
 
-**P7.1** Consulta o **Sistema de Horários UNIFOR** para obter a grade horária atual do professor conforme **RN5**.
+**P7.1** A Secretaria CCT solicita ao professor a sala de destino do equipamento.
 
-**P7.2** Exibe a sala de destino sugerida, a disciplina em curso e o horário previsto de término.
+**P7.2** O sistema exibe um campo para preenchimento manual da sala de destino.
+
+**P7.3** A Secretaria CCT informa manualmente a sala de destino indicada pelo professor.
 
 **P8.** A Secretaria CCT confirma a identificação selecionando **Confirmar e Prosseguir**. **[A2]**
 
@@ -385,18 +387,6 @@ Concreto.
 **E2.3** O sistema impede o avanço no fluxo.
 
 **E2.4** O caso de uso é encerrado.
-
----
-
-**E3. Falha na consulta ao Sistema de Horários UNIFOR**
-
-**E3.1** No passo **P7.1**, o sistema não obtém resposta do **Sistema de Horários UNIFOR**.
-
-**E3.2** O sistema exibe aviso: *"Não foi possível recuperar o horário do professor. A sala de destino deverá ser informada manualmente."*
-
-**E3.3** O sistema habilita campo de texto para inserção manual da sala de destino.
-
-**E3.4** O sistema segue para o passo **P9**.
 
 ### Pós-condições
 
@@ -919,7 +909,7 @@ Concreto.
 
 **P5.** A Secretaria CCT clica no marcador de um projetor. **[A2]**
 
-**P6.** O sistema exibe o painel lateral com: Código do Projetor, Professor Responsável Atual, Última Localização, Sala de Aula Associada (via grade horária) e Horário do Último Repasse.
+**P6.** O sistema exibe o painel lateral com: Código do Projetor, Professor Responsável Atual, Última Localização, Sala de Aula Informada e Horário do Último Repasse.
 
 **P7.** O caso de uso é encerrado.
 
