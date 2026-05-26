@@ -216,13 +216,13 @@ Concreto.
 
 **P3.** A Secretaria CCT preenche os campos obrigatórios e seleciona **Cadastrar e Gerar QR Code**. **[A1][E1][E2]**
 
-**P4.** O sistema valida os dados conforme **RN6**. **[E1][E2]**
+**P4.** O sistema valida os dados conforme **RN5**. **[E1][E2]**
 
 **P4.1** Verifica unicidade do Código de Patrimônio.
 
 **P4.2** Persiste o registro do projetor com status **disponível**.
 
-**P4.3** Abre a linha do tempo de manutenções do equipamento conforme **RN6**.
+**P4.3** Abre a linha do tempo de manutenções do equipamento conforme **RN5**.
 
 **P4.4** Gera o QR Code único vinculado ao Código de Patrimônio.
 
@@ -565,7 +565,7 @@ Concreto.
 
 - O empréstimo está com status **encerrado**.
 - O projetor está com status **disponível** (se sem avarias) ou **em_manutencao** (se com avaria registrada).
-- O resultado do checklist está persistido no prontuário técnico do projetor conforme **RN6**.
+- O resultado do checklist está persistido no prontuário técnico do projetor conforme **RN5**.
 
 ### Frequência de Utilização
 
@@ -612,7 +612,7 @@ Não se aplica (caso de uso abstrato). Acionado pela Secretaria CCT via **CDU-05
 
 **P7.2** Atualiza o status do projetor para **em_manutencao**.
 
-**P7.3** Registra a ocorrência no prontuário técnico do projetor conforme **RN6**.
+**P7.3** Registra a ocorrência no prontuário técnico do projetor conforme **RN5**.
 
 **P7.4** Envia notificação por e-mail ao professor e à Coordenação CCT informando a ocorrência.
 
@@ -818,7 +818,7 @@ Concreto.
 
 **P3.** O ator lê o QR Code fixado no projetor. **[E1]**
 
-**P4.** O sistema valida o perfil de acesso do usuário autenticado conforme **RN7**. **[A1]**
+**P4.** O sistema valida o perfil de acesso do usuário autenticado conforme **RN6**. **[A1]**
 
 **P5.** O sistema exibe o prontuário técnico completo do projetor com: Código de Patrimônio, Marca/Modelo, Ano de Fabricação, Vida Útil Estimada, Status Atual e Linha do Tempo de Manutenções. **[A2]**
 
@@ -834,7 +834,7 @@ Concreto.
 
 **A1.1** No passo **P4**, o sistema identifica que o usuário possui `role: professor`.
 
-**A1.2** O sistema redireciona para o caso de uso **CDU-07 — Transferir Posse de Projetor via QR Code**, exibindo apenas as ações de custódia conforme **RN7**.
+**A1.2** O sistema redireciona para o caso de uso **CDU-07 — Transferir Posse de Projetor via QR Code**, exibindo apenas as ações de custódia conforme **RN6**.
 
 **A1.3** O caso de uso é encerrado.
 
@@ -848,7 +848,7 @@ Concreto.
 
 **A2.3** O ator preenche os dados e confirma.
 
-**A2.4** O sistema persiste o registro de forma cumulativa no prontuário conforme **RN6** e exibe mensagem de sucesso.
+**A2.4** O sistema persiste o registro de forma cumulativa no prontuário conforme **RN5** e exibe mensagem de sucesso.
 
 **A2.5** O sistema retorna ao passo **P5**.
 
@@ -1047,14 +1047,15 @@ Baixa. Executado pontualmente após ocorrências de avaria ou após regularizaç
 | Caso de Uso | Funcionalidades | Regras de Negócio |
 |---|---|---|
 | CDU-01 | F5.1 | RN3, RN4 |
-| CDU-02 | F5.2 | RN6 |
-| CDU-03 | F1.1, F1.2 | RN2, RN5 |
+| CDU-02 | F5.2 | RN5 |
+| CDU-03 | F1.1, F1.2 | RN2 |
 | CDU-04 | F1.1 | — |
-| CDU-05 | F3.1, F3.2 | RN6 |
-| CDU-06 | F3.2 | RN1, RN2, RN6 |
+| CDU-05 | F3.1, F3.2 | RN5 |
+| CDU-06 | F3.2 | RN1, RN2, RN5 |
 | CDU-07 | F2.1, F2.2, F5.3 | RN1, RN2 |
-| CDU-08 | F5.4 | RN6, RN7 |
+| CDU-08 | F5.4 | RN5, RN6 |
 | CDU-09 | F4.1 | — |
 | CDU-10 | F3.2 | RN2 |
 
 ---
+
