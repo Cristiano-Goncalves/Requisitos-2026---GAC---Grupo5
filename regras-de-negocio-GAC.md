@@ -26,20 +26,14 @@
 * Regra: Não pode existir mais de um cadastro ativo de professor com o mesmo CPF ou com a mesma assinatura biométrica facial (matriz de *embeddings*). Além disso, o cadastro biométrico deve ser realizado uma única vez.
 * Critério verificável: O sistema deve realizar uma busca na base de dados antes de finalizar o registro; ao detectar CPF ou vetor facial já cadastrado, bloqueia o novo cadastro e orienta a regularização.
 
-### RN5. Sincronização obrigatória de contexto de aula
+### RN5. Prontuário do projetor deve registrar histórico técnico
 
 * Identificador: RN5
-* Regra: O sistema deve consumir os dados de horários, disciplinas e salas da UNIFOR no momento da operação para associar a localização prevista do projetor ao professor.
-* Critério verificável: O sistema deve cruzar o horário atual com a grade horária importada do docente e sugerir de forma automática e obrigatória o bloco e a sala de destino no ato do empréstimo.
-
-### RN6. Prontuário do projetor deve registrar histórico técnico
-
-* Identificador: RN6
 * Regra: Todo projetor cadastrado deve possuir um registro de inventário contendo o ano de fabricação e uma linha do tempo dedicada a manutenções e consertos.
 * Critério verificável: Ao registrar uma manutenção ou conserto na secretaria, o sistema deve salvar e persistir as informações de forma cumulativa atreladas ao código de identificação do ativo.
 
-### RN7. Leitura do QR Code deve filtrar dados por perfil de acesso
+### RN6. Leitura do QR Code deve filtrar dados por perfil de acesso
 
-* Identificador: RN7
+* Identificador: RN6
 * Regra: A exibição de dados ao acessar o QR Code do projetor deve variar de acordo com o tipo de usuário logado. O professor visualiza apenas ações de posse e transferência, enquanto a secretaria visualiza o prontuário técnico completo.
 * Critério verificável: O sistema deve validar as permissões do perfil autenticado antes de renderizar a página do QR Code, omitindo o histórico de manutenções e informações internas para o perfil de professor.
